@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getSession, clearSession } from "@/services/session";
 
-// Este componente solo se carga en el navegador (ver Header), por eso puede leer el localStorage.
 export default function UserMenu() {
   const router = useRouter();
   const session = getSession();
@@ -14,7 +13,6 @@ export default function UserMenu() {
     router.push("/auth/login");
   }
 
-  // Si hay un id guardado, el usuario inició sesión
   if (session.id) {
     return (
       <div className="flex items-center gap-6">

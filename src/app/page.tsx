@@ -52,9 +52,7 @@ export default function Home() {
         ataduras
       </p>
 
-      <Link href="/plans/new" className="text-blue-700 font-semibold mt-6">
-        Crear un plan
-      </Link>
+
     </div>
   );
 }

@@ -1,7 +1,6 @@
-// La URL del back se configura en el archivo .env.local (ver .env.example)
+import { getSession } from "./session";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-// Envía el correo y la contraseña al back y devuelve los datos del usuario (id, userName...)
 export async function login(email: string, password: string) {
   const response = await fetch(`${API_URL}/users/login`, {
     method: "POST",
@@ -18,7 +17,6 @@ export async function login(email: string, password: string) {
   return data;
 }
 
-// Crea un usuario nuevo en el back y devuelve su id
 export async function register(
   username: string,
   email: string,
@@ -28,7 +26,7 @@ export async function register(
   const response = await fetch(`${API_URL}/users/signin`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ userName: username, email, name, password }),
+    body: JSON.stringify({ userName: username, email, name, password, UserId : getSession().id }),
   });
 
   const data = await response.json();
@@ -38,4 +36,6 @@ export async function register(
   }
 
   return data.id;
+
+  
 }

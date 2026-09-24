@@ -21,11 +21,20 @@ export default function Header() {
         <Link href="/plans" className="text-lg font-semibold text-blue-700">
           Explorar Planes
         </Link>
+
+      <Link
+        href="/plans/new"
+        className="bg-blue-600 text-white font-semibold rounded-full px-6 py-2 mt-4" 
+      >Crear un plan</Link>
       </div>
 
       {/* key={pathname} hace que el menú se vuelva a cargar al cambiar de página,
           así se entera si el usuario acaba de iniciar sesión */}
       <UserMenu key={pathname} />
     </header>
+
+
+
+    
   );
 }

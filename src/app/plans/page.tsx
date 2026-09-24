@@ -12,10 +12,6 @@ export default async function PlansPage() {
       <div className="grid grid-cols-4 gap-8 mt-12">
         {plans.map((plan) => (
           <Link key={plan.id} href={`/plans/${plan.id}`}>
-            <img
-              src={plan.image}
-              className="w-full h-60 object-cover rounded-xl"
-            />
             <h4 className="text-2xl text-slate-900 mt-3">{plan.name}</h4>
             <p className="flex items-center text-sm text-slate-300">
               <svg

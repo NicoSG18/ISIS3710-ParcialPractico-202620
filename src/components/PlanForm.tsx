@@ -45,17 +45,15 @@ export default function PlanForm({ onAdd }: PlanesFormProps) {
         placeholder="Nombre del plan"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        minLength={2}
-        maxLength={50}
         required
         className="border p-2"
       />
+      
       <input
-        type="url"
+        type="text"
         placeholder="Link de imagen"
         value={image}
         onChange={(e) => setImage(e.target.value)}
-        required
         className="border p-2"
       />
       <input
@@ -63,7 +61,6 @@ export default function PlanForm({ onAdd }: PlanesFormProps) {
         placeholder="Dirección"
         value={address}
         onChange={(e) => setAddress(e.target.value)}
-        required
         className="border p-2"
       />
       <input
@@ -71,8 +68,6 @@ export default function PlanForm({ onAdd }: PlanesFormProps) {
         placeholder="Precio estimado"
         value={estimatedPrice}
         onChange={(e) => setEstimatedPrice(e.target.value)}
-        min="0.01"
-        required
         className="border p-2"
       />
       <input
@@ -80,8 +75,6 @@ export default function PlanForm({ onAdd }: PlanesFormProps) {
         placeholder="Duración en minutos"
         value={estimatedTime}
         onChange={(e) => setEstimatedTime(e.target.value)}
-        min="1"
-        step="1"
         required
         className="border p-2"
       />
