@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPlans } from "@/services/plans";
 
+
 export default async function PlansPage() {
   const plans = await getPlans();
 

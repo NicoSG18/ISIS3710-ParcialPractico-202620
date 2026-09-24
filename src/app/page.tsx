@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex-1 flex flex-col items-center justify-center bg-slate-50 text-center">
@@ -49,6 +51,10 @@ export default function Home() {
         <span className="text-green-700">✓</span> Sin reservas complicadas ni
         ataduras
       </p>
+
+      <Link href="/plans/new" className="text-blue-700 font-semibold mt-6">
+        Crear un plan
+      </Link>
     </div>
   );
 }
